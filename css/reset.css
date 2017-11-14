@@ -1,0 +1,12 @@
+:root{
+	font-size: 10px
+};
+
+body{
+	background-color: #c00c00;
+}
+
+body,html{
+	padding: 0px;
+	margin:0px;
+}
