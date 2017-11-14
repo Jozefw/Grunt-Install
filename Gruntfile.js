@@ -48,9 +48,23 @@ module.exports = function(grunt) {
 					dest:'images/dist'
 				}]
 			}
+		},
+		watch: {
+			less: {
+				files: ['less/*.less'],
+				tasks: ['less'],
+				options: {
+					spawn: false
+				}
+			},
+			js: {
+				files: ['js/*.js'],
+				tasks: ['jshint']
+			}
 		}
 	});
 // loads tasks
+	grunt.loadNpmTasks('grunt-contrib-watch'),
     grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	// grunt.loadNpmTasks('grunt-autoprefixer');
